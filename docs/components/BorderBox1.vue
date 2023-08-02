@@ -1,14 +1,14 @@
 <!--
  * @Autor: costa
- * @Date: 2023-07-31 16:19:42
+ * @Date: 2023-08-01 15:59:46
  * @LastEditors: costa
- * @LastEditTime: 2023-08-01 11:42:36
+ * @LastEditTime: 2023-08-01 16:13:49
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 <template>
-    <container>
-        <component v-if="compRef" :is="compRef" color="#fff" :value="value" :decimals="decimals" :separator="separator"></component>
+    <container style="height: 300px;">
+        <component v-if="compRef" :is="compRef" :colors="colors"></component>
     </container>
 </template>
 <script setup>
@@ -16,22 +16,17 @@ import Container from './Container.vue';
 import { onMounted, shallowRef, ref } from 'vue';
 
 defineProps({
-    decimals: {
-        type: Number,
-        default: 0
+    colors: {
+        type: Array,
+        default: () => ['#5ddcff', '#4e00c2']
     },
-    separator: {
-        type: String,
-        default: ''
-    }
 })
 
 const compRef = shallowRef(null);
-const value = ref(1000);
 
 onMounted(() => {
     import('e-datav-vue3').then((module) => {
-      compRef.value = module.EDigitalFlop;
+      compRef.value = module.EBorderBox1;
     })
 });
 </script>

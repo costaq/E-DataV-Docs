@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     background-color: #292b30;
-    padding: 40px 0;
+    padding: 40px;
     border-radius: 8px;
 }
 </style>

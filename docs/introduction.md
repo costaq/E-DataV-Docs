@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-07-31 14:09:29
  * @LastEditors: costa
- * @LastEditTime: 2023-08-01 12:29:01
+ * @LastEditTime: 2023-08-02 14:30:14
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -76,4 +76,54 @@ import { FullScreenContainer, DigitalFlop } from 'e-datav-react';
 
 ```
 
+:::
+
+## UMD
+
+::: code-group
+
+```js [vue2]
+
+<body>
+    <div id="app">
+        <e-digital-flop :value="9999" separator=","></e-digital-flop>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/e-datav/dist/e-datav.min.vue.js"></script>
+<script>
+    new Vue({
+        el: '#app'
+    })
+</script>
+
+```
+
+```js [vue3]
+
+<body>
+    <div id="app">
+        <e-full-screen-container>
+            <e-digital-flop :value="9999" separator="," color="#c75151"></e-digital-flop>
+        </e-full-screen-container>
+    </div>
+</body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://unpkg.com/e-datav-vue3/umd/e-datav-vue3.umd.js"></script>
+<script>
+    const { createApp } = Vue;
+    const { EDigitalFlop, EFullScreenContainer } = EDataV;
+
+    const App = createApp();
+    App.component('EDigitalFlop', EDigitalFlop);
+    App.component('EFullScreenContainer', EFullScreenContainer);
+    App.mount('#app');
+</script>
+
+```
+
+:::
+
+::: tip 注意
+目前除了数字翻牌器外，其他组件默认均根据父元素宽高自适应，也可以通过设置组件的width和height属性来设置组件的宽高
 :::
