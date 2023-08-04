@@ -8,6 +8,7 @@
     "vitepress": "^1.0.0-beta.7"
   },
   "dependencies": {
-    "e-datav-vue3": "^0.5.1"
+    "@ant-design/icons-vue": "^6.1.0",
+    "e-datav-vue3": "^0.5.2"
   }
 }
