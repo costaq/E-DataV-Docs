@@ -20,21 +20,22 @@ import Tab from './components/Tab.vue';
 
 <template>
   <div id="app">
-    <e-tab style="width:500px;height:160px;" :items="items" :columns="3" @change="handleChange"></e-tab>
+    <e-tab style="width:500px;height:160px;" :columns="3" @change="handleChange">
+        <e-tab-item value="tab1">
+            Tab1
+        </e-tab-item>
+        <e-tab-item value="tab2">
+            Tab2
+        </e-tab-item>
+        <e-tab-item value="tab3">
+            Tab3
+        </e-tab-item>
+    </e-tab>
   </div>
 </template>
 <script>
 export default {
   name: 'App',
-  data() {
-    return {
-      items: [
-        { label: 'Tab1', value: 'tab1' },
-        { label: 'Tab2', value: 'tab2' },
-        { label: 'Tab3', value: 'tab3' }
-      ],
-    }
-  },
   methods: {
     handleChange(value) {
       console.log(value);
@@ -102,6 +103,39 @@ export default Page
 
 ::: code-group
 
+```vue [vue2]
+
+<template>
+  <div id="app">
+    <e-tab style="width:500px;height:160px;" :columns="3" @change="handleChange">
+        <e-tab-item value="tab1">
+            <template slot="icon"><a-icon type="down-square" /></template>
+            Tab1
+        </e-tab-item>
+        <e-tab-item value="tab2">
+            <template slot="icon"><a-icon type="pause-circle" /></template>
+            Tab2
+        </e-tab-item>
+        <e-tab-item value="tab3">
+            <template slot="icon"><a-icon type="redo" /></template>
+            Tab3
+        </e-tab-item>
+    </e-tab>
+  </div>
+</template>
+<script>
+export default {
+  name: 'App',
+  methods: {
+    handleChange(value) {
+      console.log(value);
+    }
+  }
+}
+</script>
+
+```
+
 ```vue [vue3]
 
 <template>
@@ -166,21 +200,22 @@ export default Page
 
 <template>
   <div id="app">
-    <e-tab style="height:300px;width:200px;" :items="items" :columns="1" @change="handleChange"></e-tab>
+    <e-tab style="width:500px;height:160px;" :columns="1" @change="handleChange">
+        <e-tab-item value="tab1">
+            Tab1
+        </e-tab-item>
+        <e-tab-item value="tab2">
+            Tab2
+        </e-tab-item>
+        <e-tab-item value="tab3">
+            Tab3
+        </e-tab-item>
+    </e-tab>
   </div>
 </template>
 <script>
 export default {
   name: 'App',
-  data() {
-    return {
-      items: [
-        { label: 'Tab1', value: 'tab1' },
-        { label: 'Tab2', value: 'tab2' },
-        { label: 'Tab3', value: 'tab3' }
-      ],
-    }
-  },
   methods: {
     handleChange(value) {
       console.log(value);
@@ -245,7 +280,7 @@ export default Page
 | 字段        |      类型      |  备注 |
 | :--------: | :-----------: | :----: |
 | value|Number或String|非必填，必须是数字或字符串，指定当前值，若不指定，则会默认选中items中的第一个 |
-| items|TabItem[]|项，必填 |
+| items|TabItem[]|项，必填，仅Vue3和React有该属性 |
 | columns|Number|列数，非必填，默认值3，表示显示3列，单竖列效果即传值1即可 |
 | margin|Number|间距，非必填，默认每项间距10px |
 | fontSize|Number|文本字号，非必填，默认16 |
@@ -266,13 +301,8 @@ export default Page
 | :--------: | :-----------: | :----: |
 | label|String|文本，必填 |
 | value|Number或String|值，必填 |
-| icon|Vue3:Function,React:ReactNode|图标，非必填，Vue3 返回一个h函数，可自定义图标，如：() => h('div', { class: 'icon' })，也可使用第三方图标库， Vue2暂时不支持 |
+| icon|Vue3:Function,React:ReactNode|图标，非必填，Vue3 返回一个h函数，可自定义图标，如：() => h('div', { class: 'icon' })，也可使用第三方图标库 |
 
-
-
-::: danger 注意
-Vue2后续将删除items参数，改为slots方式，以便支持icon自定义
-:::
 
 
 
