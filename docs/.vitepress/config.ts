@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-07-31 10:13:12
  * @LastEditors: costa
- * @LastEditTime: 2023-08-01 14:02:00
+ * @LastEditTime: 2023-08-10 14:09:08
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
  */
@@ -34,6 +34,7 @@ export default defineConfig({
           { text: '数字翻牌器', link: '/digitalFlop' },
           { text: 'Tab', link: '/tab' },
           { text: '水位图', link: '/waterLevelPond' },
+          { text: '排名轮播图', link: '/scrollRankingBoard' },
         ]
       }
     ],
