@@ -9,6 +9,6 @@
   },
   "dependencies": {
     "@ant-design/icons-vue": "^6.1.0",
-    "e-datav-vue3": "^0.6.0"
+    "e-datav-vue3": "^0.6.2"
   }
 }

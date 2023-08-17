@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-08-10 14:07:06
  * @LastEditors: costa
- * @LastEditTime: 2023-08-10 14:41:06
+ * @LastEditTime: 2023-08-17 11:03:44
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -10,7 +10,7 @@
 
 ::: danger 注意
 
-最近因工作原因，React及vue2版本暂不支持，后续会陆续支持。Vue3版本后续也将增加更多属性，以支持更多场景，目前只是最基本的功能
+最近因工作原因，分不出太多时间更新，该组件vue2版本暂不支持，后续会陆续支持。Vue3及React版本后续也将增加更多属性，以支持更多场景，目前只是最基本的功能
 
 :::
 
@@ -34,11 +34,22 @@ import ScrollRankingBoard from './components/ScrollRankingBoard.vue';
 <script setup>
 import { EScrollRankingBoard } from 'e-datav-vue3';
 
-const items = Array(10).fill(0).map((item, index) => {
+// ref 用法
+const items = ref(Array(10).fill(0).map((item, index) => {
     return {
         label: `测试${index}`,
         value: index * 100
     }
+}));
+
+// reactive 用法
+const data = reactive({
+    items: Array(10).fill(0).map((item, index) => {
+        return {
+            label: `测试${index}`,
+            value: index * 100
+        }
+    })
 })
 
 const handleClick = (value, rowIndex) => {
@@ -46,6 +57,37 @@ const handleClick = (value, rowIndex) => {
 }
 </script>
 
+```
+
+```js [react]
+
+import { ScrollRankingBoard } from 'e-datav-react';
+
+function Page() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems(Array(6).fill(0).map((item, index) => {
+      return {
+        label: `测试${index}`,
+        value: index * 100
+      }
+    }));
+  }, [])
+
+  const handleRowClick = (item, rowIndex) => {
+    console.log(item, rowIndex);
+  }
+
+  return (
+    <div>
+      <ScrollRankingBoard items={items} onRowClick={handleRowClick} />
+    </div>
+  )
+}
+
+export default Page
+    
 ```
 
 :::
@@ -80,6 +122,37 @@ const handleClick = (value, rowIndex) => {
 
 ```
 
+```js [react]
+
+import { ScrollRankingBoard } from 'e-datav-react';
+
+function Page() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    setItems(Array(6).fill(0).map((item, index) => {
+      return {
+        label: `测试${index}`,
+        value: index * 100
+      }
+    }));
+  }, [])
+
+  const handleRowClick = (item, rowIndex) => {
+    console.log(item, rowIndex);
+  }
+
+  return (
+    <div>
+      <ScrollRankingBoard type="page" items={items} onRowClick={handleRowClick} />
+    </div>
+  )
+}
+
+export default Page
+    
+```
+
 :::
 
 ## 自定义高亮颜色
@@ -110,6 +183,38 @@ const handleClick = (value, rowIndex) => {
 }
 </script>
 
+```
+
+```js [react]
+
+import { ScrollRankingBoard } from 'e-datav-react';
+
+function Page() {
+  const [items, setItems] = useState([]);
+  const highlightColors = ['#FF6E76', '#FFA600', '#FFD600'];
+
+  useEffect(() => {
+    setItems(Array(6).fill(0).map((item, index) => {
+      return {
+        label: `测试${index}`,
+        value: index * 100
+      }
+    }));
+  }, [])
+
+  const handleRowClick = (item, rowIndex) => {
+    console.log(item, rowIndex);
+  }
+
+  return (
+    <div>
+      <ScrollRankingBoard items={items} onRowClick={handleRowClick} highlightColors={highlightColors} />
+    </div>
+  )
+}
+
+export default Page
+    
 ```
 
 :::

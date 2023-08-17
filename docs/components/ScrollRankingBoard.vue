@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-08-10 13:44:39
  * @LastEditors: costa
- * @LastEditTime: 2023-08-10 14:13:38
+ * @LastEditTime: 2023-08-17 10:57:24
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -28,12 +28,12 @@ const props = defineProps({
 
 const compRef = shallowRef(null);
 
-const items = Array(10).fill(0).map((item, index) => {
+const items = ref(Array(10).fill(0).map((item, index) => {
     return {
         label: `测试${index}`,
         value: index * 100
     }
-})
+}));
 
 const handleClick = (item, rowIndex) => {
     console.log(item, rowIndex);
