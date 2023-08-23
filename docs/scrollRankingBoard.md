@@ -2,17 +2,11 @@
  * @Autor: costa
  * @Date: 2023-08-10 14:07:06
  * @LastEditors: costa
- * @LastEditTime: 2023-08-17 11:03:44
+ * @LastEditTime: 2023-08-23 14:52:14
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 # 排名轮播图
-
-::: danger 注意
-
-最近因工作原因，分不出太多时间更新，该组件vue2版本暂不支持，后续会陆续支持。Vue3及React版本后续也将增加更多属性，以支持更多场景，目前只是最基本的功能
-
-:::
 
 ## 基本示例
 
@@ -25,6 +19,35 @@ import ScrollRankingBoard from './components/ScrollRankingBoard.vue';
 ::: details 点击查看代码
 
 ::: code-group
+
+```js [vue2]
+
+<template>
+  <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @row-click="handleClick"></e-tab>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      items: ref(Array(10).fill(0).map((item, index) => {
+          return {
+              label: `测试${index}`,
+              value: index * 100
+          }
+      }))
+    }
+  },
+  methods: {
+    handleClick(value, rowIndex) {
+      console.log(value, rowIndex);
+    }
+  }
+}
+</script>
+
+```
 
 ```vue [vue3]
 
@@ -100,6 +123,35 @@ export default Page
 
 ::: code-group
 
+```js [vue2]
+
+<template>
+  <e-scroll-ranking-board style="height:250px;width:450px;" type="page" :items="items" @row-click="handleClick"></e-tab>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      items: ref(Array(10).fill(0).map((item, index) => {
+          return {
+              label: `测试${index}`,
+              value: index * 100
+          }
+      }))
+    }
+  },
+  methods: {
+    handleClick(value, rowIndex) {
+      console.log(value, rowIndex);
+    }
+  }
+}
+</script>
+
+```
+
 ```vue [vue3]
 
 <template>
@@ -162,6 +214,36 @@ export default Page
 ::: details 点击查看代码
 
 ::: code-group
+
+```js [vue2]
+
+<template>
+  <e-scroll-ranking-board style="height:250px;width:450px;" :highlight-colors="highlightColors" :items="items" @row-click="handleClick"></e-tab>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      items: ref(Array(10).fill(0).map((item, index) => {
+          return {
+              label: `测试${index}`,
+              value: index * 100
+          }
+      })),
+      highlightColors: ['#FF6E76', '#FFA600', '#FFD600']
+    }
+  },
+  methods: {
+    handleClick(value, rowIndex) {
+      console.log(value, rowIndex);
+    }
+  }
+}
+</script>
+
+```
 
 ```vue [vue3]
 
