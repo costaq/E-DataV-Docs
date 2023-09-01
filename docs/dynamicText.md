@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-09-01 15:03:20
  * @LastEditors: costa
- * @LastEditTime: 2023-09-01 15:24:49
+ * @LastEditTime: 2023-09-01 15:38:35
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -36,7 +36,7 @@ import DynamicText from './components/DynamicText.vue';
     </div>
 </template>
 <script setup>
-import { EDigitalFlop } from 'e-datav-vue3';
+import { EDynamicText } from 'e-datav-vue3';
 </script>
 
 ```
@@ -59,7 +59,7 @@ import { EDigitalFlop } from 'e-datav-vue3';
     </div>
 </template>
 <script setup>
-import { EDigitalFlop } from 'e-datav-vue3';
+import { EDynamicText } from 'e-datav-vue3';
 </script>
 
 ```
