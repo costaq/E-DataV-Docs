@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-07-31 10:13:12
  * @LastEditors: costa
- * @LastEditTime: 2023-08-10 14:09:08
+ * @LastEditTime: 2023-09-01 15:07:34
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
  */
@@ -35,6 +35,7 @@ export default defineConfig({
           { text: 'Tab', link: '/tab' },
           { text: '水位图', link: '/waterLevelPond' },
           { text: '排名轮播图', link: '/scrollRankingBoard' },
+          { text: '动态文字', link: '/dynamicText' },
         ]
       }
     ],

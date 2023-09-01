@@ -2,13 +2,15 @@
  * @Autor: costa
  * @Date: 2023-07-31 14:09:29
  * @LastEditors: costa
- * @LastEditTime: 2023-08-02 14:30:14
+ * @LastEditTime: 2023-09-01 15:30:50
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 # 介绍
 
 E-DataV是一个数据可视化组件库，拥有Vue2，Vue3，React三个版本，支持多种图表
+
+最近因工作原因，更新相对缓慢，有时间会陆续更新，敬请期待
 
 ## 安装
 
@@ -125,5 +127,5 @@ import { FullScreenContainer, DigitalFlop } from 'e-datav-react';
 :::
 
 ::: tip 注意
-目前除了数字翻牌器外，其他组件默认均根据父元素宽高自适应，也可以通过设置组件的width和height属性来设置组件的宽高
+目前除了数字翻牌器、动态文字外，其他组件默认均根据父元素宽高自适应，也可以通过设置组件的width和height属性来设置组件的宽高
 :::
