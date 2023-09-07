@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-09-01 15:03:20
  * @LastEditors: costa
- * @LastEditTime: 2023-09-01 15:38:35
+ * @LastEditTime: 2023-09-06 17:56:58
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -10,7 +10,7 @@
 
 ::: danger 注意
 
-React及vue2版本暂不支持，后续会陆续支持。
+最近工作繁忙，vue2版本暂不支持，后续会陆续支持。
 
 :::
 
@@ -41,6 +41,22 @@ import { EDynamicText } from 'e-datav-vue3';
 
 ```
 
+```js [react]
+
+import { EDynamicText } from 'e-datav-react';
+
+function Page() {
+  return (
+    <div>
+      <DynamicText text={'E-DATAV数据可视化大屏'} style={{ fontSize: 36, fontWeight: 'bold' }} />
+    </div>
+  )
+}
+
+export default Page
+
+```
+
 :::
 
 ## 自定义颜色
@@ -61,6 +77,22 @@ import { EDynamicText } from 'e-datav-vue3';
 <script setup>
 import { EDynamicText } from 'e-datav-vue3';
 </script>
+
+```
+
+```js [react]
+
+import { EDynamicText } from 'e-datav-react';
+
+function Page() {
+  return (
+    <div>
+      <DynamicText text={'E-DATAV数据可视化大屏'} style={{ fontSize: 36, fontWeight: 'bold' }} colors={['#f53f3f', '#1e80ff']} />
+    </div>
+  )
+}
+
+export default Page
 
 ```
 
