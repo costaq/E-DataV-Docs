@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-08-01 13:45:29
  * @LastEditors: costa
- * @LastEditTime: 2023-08-02 10:46:54
+ * @LastEditTime: 2023-09-13 15:50:10
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -19,6 +19,7 @@
 <script setup>
 import BorderBox1 from './components/BorderBox1.vue';
 import BorderBox2 from './components/BorderBox2.vue';
+import BorderBox3 from './components/BorderBox3.vue';
 </script>
 
 <border-box-1 />
@@ -192,3 +193,66 @@ import { BorderBox2 } from 'e-datav-react';
 | borderWidth|Number|边框宽度，默认值2 |
 | lineWidth|Number|边框线长度，默认值10 |
 | backgroundColor|String|背景色，默认值rgba(76, 199, 243, 0.15) |
+
+
+## 边框3
+
+::: warning 注意
+工作繁忙，目前vue2及react版本暂无
+:::
+
+### 基本示例
+
+<border-box-3 text="E-DataV 边框" />
+
+::: details 点击查看代码
+
+::: code-group
+    
+```js [vue3]
+
+<template>
+    <e-border-box-3 text="E-DataV 边框" style="width:500px; height:300px;">
+    </e-border-box-3>
+</template>
+<script setup>
+import { EBorderBox3 } from 'e-datav-vue3';
+</script>
+    
+```
+
+:::
+
+### 自定义
+
+<border-box-3 text="E-DataV 边框" border-color="#1e80ff" background-color="transparent" text-position="right" font-color="#fff">
+</border-box-3>
+
+::: details 点击查看代码
+
+::: code-group
+    
+```js [vue3]
+
+<template>
+    <e-border-box-3 text="E-DataV 边框" border-color="#1e80ff" background-color="transparent" text-position="right" font-color="#fff" style="width:500px; height:300px;">
+    </e-border-box-3>
+</template>
+<script setup>
+import { EBorderBox3 } from 'e-datav-vue3';
+</script>
+    
+```
+
+:::
+
+### 属性
+| 字段        |      <div style="width:140px">类型</div>      |  <div style="width:320px">备注</div> |
+| ------------- | :-----------: | ----: |
+| borderColor|String|边框颜色，默认值#00ecfb |
+| borderWidth|Number|边框宽度，默认值2 |
+| backgroundColor|String|背景色，默认值00ecfb26 |
+| fontSize|Number|标题字体大小，默认值16 |
+| fontColor|String|标题字体颜色，默认值#000 |
+| textPosition|String|标题位置，默认值left，共3个属性可选，left、center、right |
+| text|String|标题文本，必填 |
