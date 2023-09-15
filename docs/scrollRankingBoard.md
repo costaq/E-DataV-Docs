@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-08-10 14:07:06
  * @LastEditors: costa
- * @LastEditTime: 2023-08-23 14:52:14
+ * @LastEditTime: 2023-09-15 11:36:27
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -23,7 +23,7 @@ import ScrollRankingBoard from './components/ScrollRankingBoard.vue';
 ```js [vue2]
 
 <template>
-  <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @row-click="handleClick"></e-tab>
+  <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @row-click="handleClick"></e-scroll-ranking-board>
 </template>
 
 <script>
@@ -31,12 +31,12 @@ export default {
   name: 'App',
   data() {
     return {
-      items: ref(Array(10).fill(0).map((item, index) => {
+      items: Array(10).fill(0).map((item, index) => {
           return {
               label: `测试${index}`,
               value: index * 100
           }
-      }))
+      })
     }
   },
   methods: {
@@ -52,7 +52,7 @@ export default {
 ```vue [vue3]
 
 <template>
-    <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @rowClick="handleClick"></e-tab>
+    <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @rowClick="handleClick"></e-scroll-ranking-board>
 </template>
 <script setup>
 import { EScrollRankingBoard } from 'e-datav-vue3';
@@ -126,7 +126,7 @@ export default Page
 ```js [vue2]
 
 <template>
-  <e-scroll-ranking-board style="height:250px;width:450px;" type="page" :items="items" @row-click="handleClick"></e-tab>
+  <e-scroll-ranking-board style="height:250px;width:450px;" type="page" :items="items" @row-click="handleClick"></e-scroll-ranking-board>
 </template>
 
 <script>
@@ -134,12 +134,12 @@ export default {
   name: 'App',
   data() {
     return {
-      items: ref(Array(10).fill(0).map((item, index) => {
+      items: Array(10).fill(0).map((item, index) => {
           return {
               label: `测试${index}`,
               value: index * 100
           }
-      }))
+      })
     }
   },
   methods: {
@@ -155,7 +155,7 @@ export default {
 ```vue [vue3]
 
 <template>
-    <e-scroll-ranking-board style="height:250px;width:450px;" type="page" :items="items" @rowClick="handleClick"></e-tab>
+    <e-scroll-ranking-board style="height:250px;width:450px;" type="page" :items="items" @rowClick="handleClick"></e-scroll-ranking-board>
 </template>
 <script setup>
 import { EScrollRankingBoard } from 'e-datav-vue3';
@@ -218,7 +218,7 @@ export default Page
 ```js [vue2]
 
 <template>
-  <e-scroll-ranking-board style="height:250px;width:450px;" :highlight-colors="highlightColors" :items="items" @row-click="handleClick"></e-tab>
+  <e-scroll-ranking-board style="height:250px;width:450px;" :highlight-colors="highlightColors" :items="items" @row-click="handleClick"></e-scroll-ranking-board>
 </template>
 
 <script>
@@ -226,12 +226,12 @@ export default {
   name: 'App',
   data() {
     return {
-      items: ref(Array(10).fill(0).map((item, index) => {
+      items: Array(10).fill(0).map((item, index) => {
           return {
               label: `测试${index}`,
               value: index * 100
           }
-      })),
+      }),
       highlightColors: ['#FF6E76', '#FFA600', '#FFD600']
     }
   },
@@ -248,7 +248,7 @@ export default {
 ```vue [vue3]
 
 <template>
-    <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @rowClick="handleClick" :highlight-colors="['#FF6E76', '#FFA600', '#FFD600']"></e-tab>
+    <e-scroll-ranking-board style="height:250px;width:450px;" :items="items" @rowClick="handleClick" :highlight-colors="['#FF6E76', '#FFA600', '#FFD600']"></e-scroll-ranking-board>
 </template>
 <script setup>
 import { EScrollRankingBoard } from 'e-datav-vue3';
