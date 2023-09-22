@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-08-01 13:45:29
  * @LastEditors: costa
- * @LastEditTime: 2023-09-13 15:50:10
+ * @LastEditTime: 2023-09-22 11:32:29
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -198,7 +198,7 @@ import { BorderBox2 } from 'e-datav-react';
 ## 边框3
 
 ::: warning 注意
-工作繁忙，目前vue2及react版本暂无
+工作繁忙，目前react版本暂无
 :::
 
 ### 基本示例
@@ -208,6 +208,15 @@ import { BorderBox2 } from 'e-datav-react';
 ::: details 点击查看代码
 
 ::: code-group
+
+```js [vue2]
+
+<template>
+    <e-border-box-3 text="E-DataV 边框" style="width:500px; height:300px;">
+    </e-border-box-3>
+</template>
+
+```
     
 ```js [vue3]
 
@@ -231,6 +240,15 @@ import { EBorderBox3 } from 'e-datav-vue3';
 ::: details 点击查看代码
 
 ::: code-group
+
+```js [vue2]
+
+<template>
+    <e-border-box-3 text="E-DataV 边框" border-color="#1e80ff" background-color="transparent" text-position="right" font-color="#fff" style="width:500px; height:300px;">
+    </e-border-box-3>
+</template>
+
+```
     
 ```js [vue3]
 
