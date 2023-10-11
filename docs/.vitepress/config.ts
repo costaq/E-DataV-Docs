@@ -36,6 +36,7 @@ export default defineConfig({
           { text: '水位图', link: '/waterLevelPond' },
           { text: '排名轮播图', link: '/scrollRankingBoard' },
           { text: '动态文字', link: '/dynamicText' },
+          { text: 'Loading加载', link: '/loading' },
         ]
       }
     ],
