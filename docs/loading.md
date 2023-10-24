@@ -2,14 +2,14 @@
  * @Autor: costa
  * @Date: 2023-10-11 16:18:32
  * @LastEditors: costa
- * @LastEditTime: 2023-10-24 11:17:31
+ * @LastEditTime: 2023-10-24 14:47:38
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 # Loading加载
 
 ::: warning 注意
-目前仅支持vue3版本，其他版本后续增加
+目前仅支持vue3和react版本，vue2版本后续增加
 :::
 
 
@@ -41,6 +41,22 @@ import { ELoading } from 'e-datav-vue3';
 
 ```
 
+```js [react]
+
+import { Loading } from 'e-datav-react';
+
+function Page() {
+  return (
+    <Loading>
+        加载中...
+    </Loading>
+  )
+}
+
+export default Page
+
+```
+
 :::
 
 ## 自定义属性
@@ -68,13 +84,27 @@ import { ELoading } from 'e-datav-vue3';
 
 ```
 
+```js [react]
+
+import { Loading } from 'e-datav-react';
+
+function Page() {
+  return (
+    <Loading borderColor='#f53f3f' size={80} style={{ position: 'absolute', fontSize: 12, color: '#ff9797' }}>
+        加载中...
+    </Loading>
+  )
+}
+
+export default Page
+
+```
+
 :::
 
 ## 属性
 
 | 字段        |      类型      |  <div style="width:450px;">备注</div> |
 | :--------: | :-----------: | :----: |
-| fontColor | string | 文字颜色，默认#1e80ff |
-| fontSize | number | 文字字体大小，默认16 |
 | borderColor | string | 边框颜色，默认#1e80ff |
 | size | number | 尺寸，即宽高，默认120 |
