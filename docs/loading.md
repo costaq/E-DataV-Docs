@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-10-11 16:18:32
  * @LastEditors: costa
- * @LastEditTime: 2023-10-11 17:07:41
+ * @LastEditTime: 2023-10-24 11:17:31
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -57,7 +57,7 @@ import { ELoading } from 'e-datav-vue3';
 
 <template>
     <div>
-        <e-loading font-color="#ff9797" :font-size="12" border-color="#f53f3f" :size="80" style="position:absolute;">
+        <e-loading border-color="#f53f3f" :size="80" style="position:absolute;font-size:12px;color:#ff9797;">
             加载中
         </e-loading>
     </div>

@@ -2,13 +2,13 @@
  * @Autor: costa
  * @Date: 2023-10-11 16:14:36
  * @LastEditors: costa
- * @LastEditTime: 2023-10-11 16:25:09
+ * @LastEditTime: 2023-10-24 11:24:46
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 <template>
     <container>
-        <component v-if="compRef" :is="compRef" :font-size="fontSize" :font-color="fontColor" :size="size" :border-color="borderColor">
+        <component v-if="compRef" :is="compRef" :style="`font-size: ${fontSize}px; color:${fontColor}`" :size="size" :border-color="borderColor">
             <slot></slot>
         </component>
     </container>
