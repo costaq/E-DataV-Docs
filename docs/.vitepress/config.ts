@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-07-31 10:13:12
  * @LastEditors: costa
- * @LastEditTime: 2023-09-01 15:07:34
+ * @LastEditTime: 2023-11-23 11:10:41
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
  */
@@ -37,6 +37,7 @@ export default defineConfig({
           { text: '排名轮播图', link: '/scrollRankingBoard' },
           { text: '动态文字', link: '/dynamicText' },
           { text: 'Loading加载', link: '/loading' },
+          { text: '仪表盘', link: '/gaugeChart' },
         ]
       }
     ],
