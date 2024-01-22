@@ -2,18 +2,13 @@
  * @Autor: costa
  * @Date: 2023-11-23 11:07:33
  * @LastEditors: costa
- * @LastEditTime: 2023-12-11 16:04:55
+ * @LastEditTime: 2024-01-22 15:37:33
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
 # 仪表盘
 
-::: warning 注意
-目前仅支持vue3及react版本，vue2版本后续会增加
-:::
-
 ## 基本示例
-
 
 <gauge-chart :value="66" />
 
@@ -24,6 +19,27 @@ import GaugeChart from './components/GaugeChart.vue';
 ::: details 点击查看代码
 
 ::: code-group
+
+```js [vue2]
+
+<template>
+  <div style="height:300px;width: 300px;">
+    <e-gauge-chart :value="value" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      value: 66
+    }
+  }
+}
+</script>
+
+```
 
 ```js [vue3]
 

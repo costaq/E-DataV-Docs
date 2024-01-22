@@ -2,7 +2,7 @@
  * @Autor: costa
  * @Date: 2023-07-31 14:09:29
  * @LastEditors: costa
- * @LastEditTime: 2023-09-01 15:30:50
+ * @LastEditTime: 2024-01-22 15:39:51
  * @Description: 
  * @Copyright: © 2023 by costa. All rights reserved.
 -->
@@ -10,7 +10,7 @@
 
 E-DataV是一个数据可视化组件库，拥有Vue2，Vue3，React三个版本，支持多种图表
 
-最近因工作原因，更新相对缓慢，有时间会陆续更新，敬请期待
+最近因工作原因，更新相对缓慢，有时间会陆续更新
 
 ## 安装
 
