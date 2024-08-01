@@ -8,7 +8,7 @@
 -->
 <template>
     <container>
-        <component style="height:300px;widht:300px;" v-if="compRef" :is="compRef" :value="val" :valueFontSize="valueFontSize"></component>
+        <component style="height:300px;width:300px;" v-if="compRef" :is="compRef" :value="val" :valueFontSize="valueFontSize" :text="text" :textFontSize="textFontSize"></component>
     </container>
 </template>
 <script setup>
@@ -23,6 +23,14 @@ defineProps({
     valueFontSize: {
         type: Number,
         default: 30
+    },
+    text: {
+        type: Number,
+        default: ''
+    },
+    textFontSize: {
+        type: Number,
+        default: 24
     }
 })
 

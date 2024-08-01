@@ -75,9 +75,36 @@ export default Page
 
 :::
 
+## 显示文本标题示例
+
+<gauge-chart :value="66" text="今日完成率" :textFontSize="24" />
+
+::: details 点击查看代码
+
+::: code-group
+
+```js [vue3]
+
+<template>
+    <div style="height:300px;width: 300px;">
+        <e-gauge-chart :value="value" text="今日完成率" :textFontSize="24" />
+    </div>
+</template>
+<script setup>
+import { EGaugeChart } from 'e-datav-vue3';
+const value = ref(66);
+</script>
+
+```
+
+:::
+
 ## 属性
 
 字段|类型|<div style="width:430px;">备注</div>
 -|-|-
 value|Number|百分比值，仅限0-100之间值
 valueFontSize|Number|数值字体大小，默认30
+text|String|文本标题内容
+textFontSize|Number|文本字体大小，默认30
+spacing|Number|文字上下间距，默认2
